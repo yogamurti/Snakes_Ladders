@@ -1,0 +1,74 @@
+<head>
+  <title>Snakes&Ladders</title>
+</head>
+
+<body>
+  <h1 align=center>Snakes & Ladders</h1>
+  <!--Rules-->
+  <div class="rules">
+	  The first person to have a score of 100 or higher wins!
+	  <br/>
+	  <br/>
+	  If your new score (after a roll) will be the same score as another player, your previous roll will be invalid and you will need to roll again.
+	  <br/>
+	  <br/>
+	  There are 2 snakes and 2 ladders:
+	  <br/>
+	  Snakes: 20 leads to 10 and 80 leads to 70.
+	  <br/>
+	  Ladders: 40 leads to 45 and 60 leads to 65.
+	  <br/>
+	  <br/>
+  </div>
+  <!--Table-->
+  {{>scoreBoard}}
+  <!--Instructions for previous move-->
+  <br/>
+  <div align="center">
+  	<span id="instructions"></span>
+	<br/>
+	<span id="congratulations"></span>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+  </div>
+  <!--Button-->
+  <div align="center">
+	  {{>roll}}
+	  {{>reset}}
+  </div>
+</body>
+
+<template name="scoreBoard">
+  <table style="text-align:center" height=200px width=50% align=center border=1>
+	  <tr>
+	  	<td><b>Turn</b></td>
+	  	<td><b>Name</b></td>
+	  	<td><b>Score (0-100)</b></td>
+	  </tr>
+	  {{#each players}}
+	  <tr>
+	  <td>
+	  	{{#if checkTurn turn}}
+	  		<img src="http://kingofwallpapers.com/circle/circle-005.jpg" style="height:10px;width:10px">
+	  	{{/if}}
+	  </td>
+	  <td>
+	  	{{name}}
+	  </td>
+	  <td>
+	  	{{score}}
+	  </td>
+	  </tr>
+	  {{/each}}
+  </table>
+ </template>
+
+<template name="roll">
+  <span class="button">Roll</span>
+</template>
+
+<template name="reset">
+  <span class="resetButton">Reset</span>
+</template>

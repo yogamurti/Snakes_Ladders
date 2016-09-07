@@ -1,0 +1,27 @@
+.rules{
+	align:center;
+	text-align:center;
+}
+.button{
+	border:solid 2px;
+	background-color:black;
+	color:white;
+	cursor: pointer;
+	font-size:120%;
+	padding:20px;
+	margin:50px;
+}
+.resetButton{
+	border:solid 2px;
+	background-color:red;
+	color:white;
+	cursor: pointer;
+	font-size:120%;
+	padding:20px;
+	padding-left: 18px;
+	padding-right: 18px;
+	margin:50px;
+}
+#congratulations{
+	color:green;
+}

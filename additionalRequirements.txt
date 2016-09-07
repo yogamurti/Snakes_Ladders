@@ -1,0 +1,12 @@
+A player will win if his/her score >=100 and the game will end.
+The roll button will no longer work when the game ends.
+
+Players may click on the reset button at any time to reset the state of the game.
+
+2 players cannot have the same score.
+If a player rolls a number which will result to his/her new score being the same as the score of another player, his/her roll will be invalid and he/she will need to roll again. (It will still be his/her turn)
+
+There are 2 snakes and 2 ladders. (Implemented using collections)
+A space will not have multiple snakes or ladders starting or ending on it.
+Snakes: 20 leads to 10 and 80 leads to 70.
+Ladders: 40 leads to 45 and 60 leads to 65.
